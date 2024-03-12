@@ -1,0 +1,36 @@
+.logo{
+    background-color: rgb(245, 197, 24);
+}
+nav {
+    color: black;
+    background-color: #121212;
+
+}
+
+.flex {
+    display: flex;
+}
+
+.center {
+    justify-content: center;
+    align-items: center;
+}
+
+.space {
+    margin-left: 1%;
+}
+
+.btn_menu {
+    border: rgb(31,31,31);
+    color: white;
+    background-color: transparent;
+    
+}
+.btn_menu:hover {
+    background-color: rgb(31,31,31);
+}
+
+.input{
+    background-color: white;
+    height: 100%;
+}

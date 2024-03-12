@@ -1,0 +1,119 @@
+<div class="container" style="margin-top: 2%; color: white">
+  <div>
+    <!-- Movies -->
+    <div>
+      <h1>Top 10 on IMDb this Week</h1>
+    </div>
+
+    <div class="flex">
+      <div class="flex" style="width: 100%; overflow: auto">
+        <div *ngFor="let movie of movies" style="margin-right: 2%">
+          <div>
+            <div>
+              <a href="tt/{{ this.movie.id }}" style="color: white">
+                <span class="icon-and-image">
+                  <mat-icon class="bookmark-icon">bookmark_add</mat-icon>
+                  <img
+                    class="movies"
+                    src="{{ this.movie.image }}"
+                    alt="picture"
+                  />
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="container" style="background-color: #1a1a1a">
+            <div
+              class="flex"
+              style="align-items: center; justify-content: space-between"
+            >
+              <div class="flex center">
+                <mat-icon style="color: yellow">star</mat-icon>
+                <span> {{ this.movie.review.reviewRating.ratingValue }} </span>
+              </div>
+              <div>
+                <a href="#">
+                  <mat-icon>open_in_new</mat-icon>
+                </a>
+              </div>
+            </div>
+            <div class="center text-truncate" style="max-width: 150px">
+              <h2>{{ this.movie.name }}</h2>
+            </div>
+
+            <div class="flex center">
+              <button class="btn btn-primary" style="background-color: #121212">
+                <div class="flex" style="align-items: center">
+                  <mat-icon style="color: #0d6efd">add</mat-icon>
+                  <p style="color: #0d6efd; margin: 0 0 0px">Watchlist</p>
+                </div>
+              </button>
+            </div>
+
+            <div
+              class="flex center"
+              style="
+                justify-content: space-between;
+                margin-top: 10%;
+                margin-bottom: 10%;
+              "
+            >
+              <button class="btn btn-primary">
+                <div
+                  class="flex"
+                  style="align-items: center; justify-content: space-between"
+                >
+                  <mat-icon>send</mat-icon>
+                  <p style="margin: 0 0 0px">Trailer</p>
+                </div>
+              </button>
+              <div>
+                <a href="#" style="color: white">
+                  <mat-icon>info</mat-icon>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+    <!-- Actors -->
+    <div style="margin-top: 5%">
+      <div class="flex" style="align-items: center">
+        <h1 style="margin: 0 0 0px">Born today</h1>
+        <mat-icon>arrow_forward_ios</mat-icon>
+      </div>
+    </div>
+
+    <div class="flex">
+      <div class="flex" style="width: 100%; overflow: auto">
+        <div *ngFor="let actor of actors" style="margin-right: 2%">
+          <div>
+            <div class="container mt-2">
+              <div>
+                <a
+                  href="actor/{{ this.actor.id }}"
+                  style="text-decoration: none; color: white"
+                >
+                  <img
+                    class="actor rounded-circle"
+                    style="object-fit: cover"
+                    src="{{ this.actor.image }}"
+                    alt="actor"
+                  />
+                  <span class="flex center mt-2"> {{ actor.name }} </span>
+                  <span class="flex center mt-2">
+                    {{ actor.mainEntity.age }}
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

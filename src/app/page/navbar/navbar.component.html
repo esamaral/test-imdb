@@ -1,0 +1,234 @@
+<!-- <nav>
+  <mat-grid-list class="flex" cols="7" rowHeight="4:1">
+    <mat-grid-tile>
+      <div class="flex">
+        <div class="logo">
+          <h1 style="font-weight: bold">IMDb</h1>
+        </div>
+      </div>
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+      <div>
+        <button mat-button>
+          <div class="flex">
+            <mat-icon>menu</mat-icon>
+            <span>Menu</span>
+          </div>
+        </button>
+        <mat-menu>
+          <button mat-menu-item>None Data Jaaa</button>
+          <button mat-menu-item>None Data Jaaa 5555</button>
+        </mat-menu>
+      </div>
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+      <div>
+        <button mat-button [matMenuTriggerFor]="menuAll">
+          <div class="flex">
+            <b>All</b>
+            <mat-icon>arrow_drop_down</mat-icon>
+          </div>
+        </button>
+        <mat-menu #menuAll="matMenu">
+          <button mat-menu-item><mat-icon>search</mat-icon> All</button>
+          <button mat-menu-item><mat-icon>theaters</mat-icon> Titles</button>
+          <button mat-menu-item><mat-icon>tv</mat-icon>TV Episodes</button>
+          <button mat-menu-item><mat-icon>group</mat-icon>Celebs</button>
+          <button mat-menu-item><mat-icon>domain</mat-icon>Companies</button>
+          <button mat-menu-item>
+            <mat-icon>label _important </mat-icon>Keywords
+          </button>
+          <hr />
+          <div>
+            <button mat-menu-item>
+              <div class="flex">
+                <div>
+                  <mat-icon>find_in_page</mat-icon>
+                </div>
+                Advanced Search
+                <div style="margin-top: 3%">
+                  <mat-icon>chevron_right</mat-icon>
+                </div>
+              </div>
+            </button>
+          </div>
+        </mat-menu>
+      </div>
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+      <div></div>
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+      <div></div>
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+      <div></div>
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+      <div></div>
+    </mat-grid-tile>
+  </mat-grid-list>
+</nav> -->
+<nav>
+  <div class="container flex col-sm-12">
+    <!-- Logo -->
+    <div class="col-sm-1 flex center">
+      <button type="button" class="btn btn-warning logo">
+        <a class="dropdown-item flex center" href="#">
+          <strong style="font-size: 100%">IMDb</strong>
+        </a>
+      </button>
+    </div>
+
+    <!-- Menu -->
+    <div class="col-sm-1 flex center" style="margin-block: 1%">
+      <div class="space">
+        <button type="button" class="btn btn-primary btn_menu">
+          <div class="flex center">
+            <mat-icon>menu</mat-icon>
+            <span>Menu</span>
+          </div>
+        </button>
+      </div>
+    </div>
+
+    <!-- Select All and Search-->
+    <div class="col-sm-6 flex center">
+      <div class="dropdown flex" style="align-items: center">
+        <button
+          type="button"
+          class="btn btn-light dropdown-toggle"
+          data-bs-toggle="dropdown"
+        >
+          <span> All </span>
+        </button>
+
+        <!-- Data dropdown -->
+        <ul class="dropdown-menu">
+          <li>
+            <a class="dropdown-item flex" style="align-items: center" href=" ">
+              <mat-icon>search</mat-icon>
+              <span style="margin-left: 5%"> All </span>
+            </a>
+          </li>
+
+          <li>
+            <a class="dropdown-item flex" href=" ">
+              <mat-icon>theaters</mat-icon>
+              <span style="margin-left: 5%"> Titles </span>
+            </a>
+          </li>
+
+          <li>
+            <a class="dropdown-item flex" href=" ">
+              <mat-icon>tv</mat-icon>
+              <span style="margin-left: 5%"> TV Episodes </span>
+            </a>
+          </li>
+
+          <li>
+            <a class="dropdown-item flex" href=" ">
+              <mat-icon>group</mat-icon>
+              <span style="margin-left: 5%"> Celebs </span>
+            </a>
+          </li>
+
+          <li>
+            <a class="dropdown-item flex" href=" ">
+              <mat-icon>domain</mat-icon>
+              <span style="margin-left: 5%"> Companies </span>
+            </a>
+          </li>
+
+          <li>
+            <a class="dropdown-item flex" href=" ">
+              <mat-icon>label_important</mat-icon>
+              <span style="margin-left: 5%"> Keyboard </span>
+            </a>
+          </li>
+          <hr />
+
+          <li>
+            <a class="dropdown-item flex" href=" ">
+              <mat-icon>find_in_page</mat-icon>
+              <span style="margin-left: 5%"> Advanced Search </span>
+              <mat-icon>chevron_right</mat-icon>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <input mat-input class="btn btn-light" placeholder="Search IMDb" type="text" name="" id="" />
+        <button type="button" class="btn btn-light" color="primary"><mat-icon>search</mat-icon></button>
+      </div>
+    </div>
+
+    <!-- Search -->
+    <!-- <div class="col-sm-5 flex" style="align-items: center">
+      <form action="" style="width: 100%">
+        <div class="flex">
+          <input matInput name="search" id="search" placeholder="Search IMDb" style="width: 100%" />
+          <button class="btn btn-primary flex center">
+            <mat-icon>search</mat-icon>
+          </button>
+        </div>
+      </form>
+    </div> -->
+
+    <!-- IMDbPro -->
+    <div class="col-sm-1 flex center">
+      <div class="space">
+        <button type="button" class="btn btn-primary btn_menu">
+          <div class="flex center">
+            <strong
+              >IMDb<strong style="color: rgb(118, 195, 241)"
+                >Pro</strong
+              ></strong
+            >
+          </div>
+        </button>
+      </div>
+    </div>
+
+    <!-- Watchlist -->
+    <div class="col-sm-1 flex center">
+      <div class="space">
+        <button type="button" class="btn btn-primary btn_menu">
+          <div class="flex center">
+            <mat-icon>bookmark_add</mat-icon>
+            <strong>Watchlist</strong>
+          </div>
+        </button>
+      </div>
+    </div>
+
+    <!-- Sign In -->
+    <div class="col-sm-1 flex center">
+      <div class="space">
+        <button type="button" class="btn btn-primary btn_menu">
+          <div class="flex center">
+            <strong>Sign In</strong>
+          </div>
+        </button>
+      </div>
+    </div>
+
+    <!-- Language -->
+    <div class="col-sm-1 flex center">
+      <div class="space">
+        <button type="button" class="btn btn-primary btn_menu">
+          <div class="flex center">
+            <strong>EN</strong>
+            <mat-icon>arrow_drop_down</mat-icon>
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,30 @@
+.flex {
+  display: flex;
+}
+
+.center {
+  align-items: center;
+  justify-content: center;
+}
+
+.background {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  background-size: cover;
+  background-position: center;
+  // filter: brightness(100%); /* ทำให้รูปภาพดำ */
+  // opacity: 0.8; /* ทำให้พื้นหลังมืดลง */
+}
+
+.content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(35px);
+  /* เพิ่มเอฟเฟ็กต์เบลอลงบนพื้นหลัง */
+  color: white;
+  /* เปลี่ยนสีข้อความตามต้องการ */
+}

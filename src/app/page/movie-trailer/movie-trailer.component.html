@@ -1,0 +1,114 @@
+<div class="container">
+  <div class="flex mt-5">
+    <button class="btn btn-close-white" (click)="backClicked()">
+      <div class="flex center" style="color: rgb(245, 197, 24)">
+        <mat-icon>arrow_back_ios</mat-icon>
+        <h1 style="margin: 0 0 0px">
+          <strong>Back</strong>
+        </h1>
+      </div>
+    </button>
+  </div>
+</div>
+
+<div>
+  <!-- background -->
+  <div
+    class="background"
+    style="color: white; height: 80vh"
+    [style.backgroundImage]="'url(' + title.image + ')'"
+  >
+    <div class="content">
+      <div class="container mt-2">
+        <div class="flex center" style="justify-content: space-between">
+          <div>
+            <h1>{{ title.name }}</h1>
+          </div>
+          <div>
+            <p style="margin: 0 0 0px">IMDb RATING</p>
+            <div class="flex">
+              <mat-icon style="color: yellow">star</mat-icon>
+              <h1>{{ title.review.reviewRating.ratingValue }} /</h1>
+              <h1>{{ title.review.reviewRating.bestRating }}</h1>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex center">
+          <div class="flex picture" style="height: 40vh">
+            <img src="{{ title.image }}" alt="Picture Movie" />
+            <iframe
+              width="80%"
+              [src]="this.trailerUrl"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+            <video width="20%">
+            </video>
+          </div>
+        </div>
+
+        <!-- data Movie -->
+        <div class="mt-3">
+          <div class="flex">
+            <div
+              *ngFor="let dataMovie of this.title.genre"
+              style="margin-left: 1%"
+            >
+              <button class="btn btn-primary">
+                <p style="margin: 0 0 0px">{{ dataMovie }}</p>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Discription -->
+        <div class="mt-3">
+          <h3>{{ title.description }}</h3>
+          <hr />
+        </div>
+
+        <!-- Director -->
+        <div class="flex mt-3" style="align-items: center">
+          <h3 style="margin: 0 0 0px">Director :</h3>
+          <div
+            *ngFor="let director of this.title.director"
+            style="margin-left: 1%"
+          >
+            <a href="actor/{{ director.id }}" style="color: white">
+              <p style="margin: 0 0 0px">{{ director.name }}</p>
+            </a>
+          </div>
+        </div>
+        <hr />
+
+        <!-- Writers -->
+        <div class="flex mt-3" style="align-items: center">
+          <h3 style="margin: 0 0 0px">Writers :</h3>
+          <div
+            *ngFor="let create of this.title.creator"
+            style="margin-left: 1%"
+          >
+            <a href="actor/{{ create.id }}" style="color: white">
+              <p style="margin: 0 0 0px">{{ create.name }}</p>
+            </a>
+          </div>
+        </div>
+        <hr />
+
+        <!-- Stars -->
+        <div class="flex mt-3" style="align-items: center">
+          <h3 style="margin: 0 0 0px">Stars :</h3>
+          <div *ngFor="let star of this.title.actor" style="margin-left: 1%">
+            <a href="actor/{{ star.id }}" style="color: white">
+              <p style="margin: 0 0 0px">{{ star.name }}</p>
+            </a>
+          </div>
+        </div>
+        <hr />
+      </div>
+    </div>
+  </div>
+</div>
